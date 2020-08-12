@@ -1,5 +1,5 @@
-const baseUrl = 'http://jservice.io/'
-const catsUl = document.querySelector('#cats')
+const baseUrl = 'http://jservice.io/';
+const catsUl = document.querySelector('#cats');
 
 fetch(baseUrl + 'api/categories?count=100')
 .then(resp => resp.json())
@@ -8,7 +8,14 @@ fetch(baseUrl + 'api/categories?count=100')
     // shuffle array
     const shuffled = cats.sort(() => 0.5 - Math.random());
 
-    let selected = shuffled.slice(0,10);
+    let selectedCats = shuffled.slice(0,10);
 
-    console.log(selected)
+    console.log(selectedCats)
+
+    selectedCats.map(cat => {
+
+        const li = document.createElement('Li');
+        li.innerHTML = cat.title;
+        catsUl.appendChild(li);
+})
 })
