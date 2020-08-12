@@ -1,3 +1,7 @@
-const baseUrl = 'http://jservice.io/api'
+const baseUrl = 'http://jservice.io/'
 
-fetch('url.com/api/thing?apiKey=kskjdkj')
+fetch(baseUrl + 'api/clues')
+.then(resp => resp.json())
+.then(clues => {
+    console.log(clues)
+})
