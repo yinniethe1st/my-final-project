@@ -16,6 +16,12 @@ fetch(baseUrl + 'api/categories?count=100')
 
         const li = document.createElement('Li');
         li.innerHTML = cat.title;
+        li.setAttribute('catId', cat.id)
+        
+        li.addEventListener('click', () => {
+            console.log(event.target.getAttribute('catid'))
+        })
+
         catsUl.appendChild(li);
 })
 })
