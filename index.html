@@ -4,18 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trivia!</title>
+
+    
+
     <link rel='stylesheet' href="styles.css">
 </head>
 <body>
-    <h4>Choose a Category</h4>
-    <ul id="cats"></ul>
+<div id="container">
+    <!-- <div id ="flashcard-wrapper"> -->
+        <div id='heading'> <h1>Jeopary flashcard</h1></div>
 
-    <h4>Choose a Clue</h4>
-    <ul id="clues"></ul>
-    <div id="answerDiv">
-        <h4>Answer</h4>
-        <p id="answer"></p>
+        <div id ='title'> <h4>Choose a Category</h4> </div>
+
+        <div id="ChooseCategory">  
+            <button id="btnChooseCategory"> Pick a category </button>
+            <ul id="flashcards"></ul>
+            </div>
+
+        <div id="ChooseDifficulty">  
+
+        <h4>Choose Level of Difficulty </h4>
+        <ul id="clues"></ul> 
+    </div>
+
+        <div id="questionDiv">
+
+            <h4>Question</h4>
+            <p id="question"></p>
+            <button id="btnDisplayAnswer"> Display Answer</button>
+        </div>
+
+
+            <div id="answerDiv">
+
+                <ul id="answerul"></ul>
+
+                <h4>Answer</h4>
+                <p id="answer"></p>
+            </div>
+        <!-- </div> -->
 </div>
     <script type='module' src="main.js"></script>
+
+
 </body>
 </html>

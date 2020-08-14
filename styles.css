@@ -1,0 +1,40 @@
+#questionDiv {
+    display: none;
+}
+
+#answerDiv {
+    display: none;
+}
+
+
+ul {
+    list-style-type: none;
+}
+
+#container{
+    padding: 5em;
+    display: block;
+    margin: auto 0;
+    justify-content: center;
+    text-align: center;    
+
+}
+
+/* #flashcard-wrapper {
+    border: 1px solid #376cdd;
+} */
+button {
+    width: 50%;
+}
+
+#questionZ{
+    background-color: #fafafa;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+#answerZ {
+    display: none;
+}
