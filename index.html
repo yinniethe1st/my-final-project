@@ -3,23 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trivia!</title>
+    <title>Flashcard</title>
 
-    
+
 
     <link rel='stylesheet' href="styles.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Fredoka+One&family=Monda&family=Staatliches&display=swap" rel="stylesheet">
 </head>
 <body>
 <div id="container">
     <!-- <div id ="flashcard-wrapper"> -->
-        <div id='heading'> <h1>Jeopary flashcard</h1></div>
+        <div id='heading'> <h1>Jeopardy flashcard</h1></div>
 
-        <div id ='title'> <h4>Choose a Category</h4> </div>
+        <div id ='title'> <h4>Choose a Category</h4> 
+           
+        </div>
 
         <div id="ChooseCategory">  
-            <button id="btnChooseCategory"> Pick a category </button>
-            <ul id="flashcards"></ul>
-            </div>
+            <div> <button id="btnChooseCategory"> Pick a category </button></div>
+                <ul id="flashcards"></ul>
+
 
         <div id="ChooseDifficulty">  
 
@@ -28,10 +32,19 @@
     </div>
 
         <div id="questionDiv">
-
+        <div id="displayQuestion">
             <h4>Question</h4>
             <p id="question"></p>
+            </div>
+
+            <label id='guess-label'> Guess the answer</label>
+            <input type="guess-button" id="user-answer">
+            <p id='check-answer'> </p>
+            <button id="guess-button" type="button">Guess</button>
+
+
             <button id="btnDisplayAnswer"> Display Answer</button>
+
         </div>
 
 
