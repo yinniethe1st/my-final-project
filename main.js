@@ -16,25 +16,24 @@ function onChooseCategory(event) {
     fetch('http://jservice.io/api/categories?count=100')
         .then(res => res.json())
         .then(flashcards => {
-            console.log(flashcards);
 
-            const shuffled = flashcards.sort(() => 0.5 - Math.random());
+            const pickaCards = flashcards.sort(() => 0.5 - Math.random());
 
-            let selectedCards = shuffled.slice(0, 6);
-            console.log(selectedCards);
+            let selectedCards = pickaCards.slice(0, 6);
 
             flashcardUrl.innerHTML = "";
 
             selectedCards.map(flashcard => {
                 const liCategory = document.createElement('div');
+
                 liCategory.className = 'myclass';
 
                 liCategory.innerHTML = flashcard.title;
+                
                 liCategory.setAttribute('flashcardid', flashcard.id);
 
                 liCategory.addEventListener('click', (event) => {
                     const currentFlashcardid = event.target.getAttribute('flashcardid');
-                    console.log(event.target.getAttribute('flashcardid'));
 
                     gettingClue.innerHTML = "";
                     answerP.innerHTML = "";
@@ -57,18 +56,16 @@ const getDataService = (currentFlashcardid) => {
         .then(res => res.json())
         .then(data => {
             const clues = data.clues;
-            console.log(clues)
 
             clues.map(clue => {
-                console.log(clue)
 
-                const li = document.createElement('div');
+                const listName = document.createElement('div');
 
               
-                li.className = 'levelClass';
-                li.innerHTML = `${clue.value}`;
+                listName.className = 'levelClass';
+                listName.innerHTML = `${clue.value}`;
 
-                li.addEventListener('click', (event) => {
+                listName.addEventListener('click', (event) => {
 
                     questionDiv.setAttribute('style', 'display: block;');
                     question.innerHTML = clue.question;
@@ -99,7 +96,7 @@ const getDataService = (currentFlashcardid) => {
                     })
                 })
 
-                gettingClue.appendChild(li);
+                gettingClue.appendChild(listName);
             })
         })
 }
