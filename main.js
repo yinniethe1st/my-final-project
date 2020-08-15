@@ -13,7 +13,7 @@ const userAnswerInput = document.getElementById('user-answer');
 const checkAnswer = document.querySelector('#check-answer');
 
 function onChooseCategory(event) {
-    fetch('http://jservice.io/api/categories?count=100')
+    fetch('https://jservice.io/api/categories?count=100')
         .then(res => res.json())
         .then(flashcards => {
 
@@ -29,7 +29,7 @@ function onChooseCategory(event) {
                 liCategory.className = 'myclass';
 
                 liCategory.innerHTML = flashcard.title;
-                
+
                 liCategory.setAttribute('flashcardid', flashcard.id);
 
                 liCategory.addEventListener('click', (event) => {
@@ -52,7 +52,7 @@ function onChooseCategory(event) {
 btnChooseCategory.addEventListener('click', onChooseCategory);
 
 const getDataService = (currentFlashcardid) => {
-    fetch('http://jservice.io/api/category?id=' + currentFlashcardid)
+    fetch('https://jservice.io/api/category?id=' + currentFlashcardid)
         .then(res => res.json())
         .then(data => {
             const clues = data.clues;
